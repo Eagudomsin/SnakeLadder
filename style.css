@@ -1,0 +1,259 @@
+
+* {
+    margin: 0;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    letter-spacing: 0.6px;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1 {
+    padding-top: 30px;
+}
+
+#snake {
+    width: 300px;
+    max-width: 50%;
+    margin-top: 20px;
+}
+
+#setting {
+    margin-top: 30px;
+    margin-left: calc( 50% - 205px );
+    padding: 30px;
+    background: #bbccdd;
+    border-radius: 40px;
+    width: 350px;
+
+}
+
+#setting h3 {
+    display: inline-block;
+    padding: 10px;
+}
+
+#setting button {
+    padding: 5px 20px;   
+    border-radius: 20px;
+    margin: 30px 0 0 0;
+}
+
+#playing {
+    margin: 10px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+#boardContainer {
+    padding: 40px;
+    background: #bbccdd;
+    border-radius: 30px;
+    margin: 0 20px;
+}
+
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: 1px solid rgba(255, 255, 255,0.6);
+}
+
+.squareLarge {
+    width: 158px;
+    height: 158px;
+}
+
+.squareMedium {
+    width: 98px;
+    height: 98px;
+}
+
+.squareSmall {
+    width: 88px;
+    height: 88px;
+}
+
+.square {
+    position: relative;
+    background: rgb(166, 240, 240);
+    border: 1px solid rgb(255, 255, 255,0.6);
+}
+
+.square h4 {
+    padding: 5px;
+}
+
+.square p {
+    font-size: 0.8rem;
+    padding: 10px;
+}
+
+.square img {
+    width: 25%;
+    transition: 0.2s;
+}
+
+.imageContainer {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    bottom: 5px;
+    width: 100%;
+    height: 60%;
+    z-index: 2;
+}
+
+.startAndFinish {
+    background: rgb(160, 201, 247);
+}
+
+.moveForward {
+    background: rgb(130, 250, 146);
+}
+
+.moveBackward {
+    background: rgb(247, 160, 175);
+}
+
+.moveToStart {
+    background: rgb(186, 160, 247);
+}
+
+.console {
+    padding: 30px;
+    background: #bbddbb;
+    border-radius: 30px;
+    margin: 0 20px;
+    position: relative;
+    width: 250px;
+    min-height: 550px;
+}
+
+.playerTurnDisplay {
+    margin: 10px;
+    padding: 10px;
+    background: #eeeeee;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgb(163, 163, 163);
+    transition: 0.2s;
+}
+
+.playTurnActive {
+    background:rgb(177, 168, 255);
+    box-shadow: 5px 5px 3px rgb(117, 180, 252);
+    transition: 0.2s;
+}
+
+#turn {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+
+#dicePic {
+    max-width: 160px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+#diceRollBtn {
+    position: absolute;
+    font-size: 20px;
+    padding: 5px 40px;
+    border-radius: 20px;
+    bottom: 30px;
+    left: 95px;
+}
+
+#record {
+    width: 250px;
+    padding: 30px;
+    background: #ddbbdb;
+    border-radius: 30px;
+    margin: 0 20px;
+}
+
+#history {
+    text-align: left;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.fixScreen {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.winnerDisplay {
+    display: initial;
+    position: fixed;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    background: #1a1a1aaa;
+    text-align: center;
+    top: 0;
+    left: 0;
+    padding: 50px;
+}
+
+.winnerDisplay img {
+    margin-bottom: 30px;
+    width: 50%;
+    max-width: 300px;
+}
+
+#playerText {
+    font-size: 3rem;
+    padding: 20px;
+    background: #303030dd;
+    color: #fff;
+    width: 400px;
+    border-radius: 50px;
+    position: absolute;
+    left: calc( 50% - 220px);
+}
+
+#exitBtn {
+    position: absolute;
+    top: 80vh;
+    width: 250px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    left: calc( 50% - 125px);
+    font-size: 3rem;
+}
+
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2.5px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-5px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(5px, 0, 0);
+    }
+}
+
+.shake {
+    animation: shake 0.2s;
+}

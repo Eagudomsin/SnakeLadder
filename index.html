@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Snakeladder</title>
+</head>
+<body>
+    <div id="winnerAlert" class="hidden">
+        <img src="Image/winnercup.svg" alt="winner cup">
+        <h2 id="playerText"></h2>
+        <button id="exitBtn">OK</button>
+    </div>
+    <div id="mainContainer" class="fixScreen">
+        <h1>SNAKE-LADDER GAME</h1>
+        <img src="Image/Logo.jpg" id="snake" alt="snake">
+        <div id="setting">
+            <h3>Player:</h3>
+            <select name="" id="player">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <h3>Row:</h3>
+            <select name="" id="row">
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+            <h3>Column:</h3>
+            <select name="" id="column">
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+            <button onclick="gameStart()">START GAME</button>
+        </div>
+        <div id="playing" class="hidden">
+            <div id="boardContainer">
+                <div id="board"></div>
+            </div>
+            <div class="console">
+                <h3>Player Turn:</h3>
+                <div id="turn"></div>
+                <div class="dice-container">
+                    <div id="dice">
+                        <img id="dicePic" src="Image/dice1.svg" alt="dice"></div>
+                        <h4 id="diceText"></h4>
+                    <button id="diceRollBtn">Roll!</button>
+                </div> 
+            </div>
+            <div id="record">
+                <h2>Record</h2>
+                <h4 id="history"></h4>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
