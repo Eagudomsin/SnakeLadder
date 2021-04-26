@@ -170,7 +170,7 @@ class Game {
         function MoveBackwardIndex(area)  {
             while(true) {
                 let randomBackwardIndex = Math.round(Math.random() * (area + MoveBackward -2)) - MoveBackward
-                if (randomBackwardIndex != MoveForwardIndex ) { 
+                if ((randomBackwardIndex != MoveForwardIndex) && (randomBackwardIndex != MoveForwardIndex + MoveForwardIndex)) { 
                     document.getElementById(`square${randomBackwardIndex}`).innerHTML = document.getElementById(`square${randomBackwardIndex}`).innerHTML + `<p>Move Backward ${-MoveBackward}</p>`
                     return randomBackwardIndex}
             }
@@ -332,3 +332,7 @@ class Board {
     specialMoveAdd = 0
     specialMoveMultiply = 1
 }
+
+document.getElementById("closeBtn").addEventListener("click", () => {
+    location.reload()
+})

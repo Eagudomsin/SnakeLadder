@@ -179,6 +179,7 @@ h1 {
     background: #ddbbdb;
     border-radius: 30px;
     margin: 0 20px;
+    position: relative;
 }
 
 #history {
@@ -233,6 +234,15 @@ h1 {
     border-radius: 50px;
     left: calc( 50% - 125px);
     font-size: 3rem;
+}
+
+#closeBtn {
+    position: absolute;
+    font-size: 20px;
+    padding: 5px 40px;
+    border-radius: 20px;
+    bottom: 30px;
+    left: 95px;
 }
 
 
